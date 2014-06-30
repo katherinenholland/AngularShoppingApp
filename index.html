@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+	<head>
+		<meta charset="UTF-8">
+		<title>Shopping List App</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+		<div ng-controller="SampleCtrl">
+			<table>
+				<thead>
+					<th>List Item</th>	
+				</thead>
+				<tbody>
+					<tr ng-repeat="item in list">
+						<td>{{item}}</td>
+					</tr>
+					<tr>
+						<td><input ng-model="addItem" type="text" placeholder="List Item"></td>
+						<td><button ng-click="addItem()">Add</button></td>
+						<td><button ng-click="removeItem()">Remove</td>
+					</tr>
+				</tbody>
+			</table>	
+		</div>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script src="app.js"></script>
+	</body>
+</html>

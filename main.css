@@ -1,7 +1,8 @@
-li {
+ul {
 	list-style-type: none;
 }
 
 .done {
 	color: #ccc;
+	text-decoration: line-through;
 }

@@ -4,7 +4,7 @@ function SampleCtrl($scope) {
 
 	$scope.addItem = function() {
 
-		var newItem = $scope.item.length;
+		var newItem = $scope.list.length;
 		newItem++;
 
 		$scope.item.push(

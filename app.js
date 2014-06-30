@@ -1,5 +1,5 @@
-angular.module('ToDo', []);
-controller('todoController', ['$scope', function($scope){
+angular.module('ToDo',[]).
+controller('todoController',['$scope', function($scope){
 	$scope.todos = [
 		{'title':'Build a todo app', 'done':false}
 	];

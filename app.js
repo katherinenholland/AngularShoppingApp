@@ -1,14 +1,19 @@
-function SampleCtrl($scope) {
+angular.module('ToDo', []);
+controller('todoController', ['$scope', function($scope){
+	$scope.todos = [
+		{'title':'Build a todo app', 'done':false}
+	];
 
-	$scope.list = [];
+	$scope.addTodo = function(){
+		$scope.todos.push({'title':$scope.newTodo,'done':false})
+		$scope.newTodo = ''
+		
+	}
 
-	$scope.addItem = function() {
-
-		var newItem = $scope.list.length;
-		newItem++;
-
-		$scope.item.push(
-			{id: newItem}
-		);
-	};
-};
+	$scope.clearCompleted = function(){
+		$scope.todos = $scope.todos.filter(function(item){
+			return !item.done
+		})
+	}
+	
+}])

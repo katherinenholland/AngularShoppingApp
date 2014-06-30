@@ -1,6 +1,6 @@
 function SampleCtrl($scope) {
 
-	$scope.item = [];
+	$scope.list = [];
 
 	$scope.addItem = function() {
 
